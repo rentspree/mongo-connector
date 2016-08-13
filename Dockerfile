@@ -1,6 +1,6 @@
 FROM python:3.5
-WORKDIR /app
+WORKDIR /scripts
 RUN pip install mongo-connector
 RUN pip install elastic2-doc-manager
-ADD ./scripts /app/scripts
+ADD ./scripts /scripts
 ENTRYPOINT [ "/scripts/mongo-connector.sh" ]
