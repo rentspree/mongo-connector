@@ -3,4 +3,5 @@ WORKDIR /scripts
 RUN pip install mongo-connector
 RUN pip install elastic2-doc-manager
 ADD ./scripts /scripts
+RUN chmod +x /scripts/mongo-connector.sh
 ENTRYPOINT [ "/scripts/mongo-connector.sh" ]
